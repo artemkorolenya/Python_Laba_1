@@ -64,10 +64,7 @@ def print_Benin_flag():
     main_width = 32
     
     for i in range(height):
-        # Зеленая вертикальная полоса слева
         line = f"{GREEN}{' ' * green_width}{RESET}"
-        
-        # Основная часть - желтая сверху, красная снизу
         if i < height // 2:
             line += f"{YELLOW}{' ' * main_width}{RESET}"
         else:
@@ -100,4 +97,5 @@ with open('sequence.txt', 'r') as f:
     neg_bar = ' ' * int(neg/total * width)
     
     print(f" 0-5:    {CSI}48;5;9m{pos_bar}{RESET}{pos/total*100:.1f}%")
+
     print(f" 0-(-5): {CSI}48;5;122m{neg_bar}{RESET} {neg/total*100:.1f}%")
