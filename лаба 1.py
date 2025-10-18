@@ -1,4 +1,6 @@
 import time 
+
+
 CSI = '\x1b['
 RESET = f'{CSI}0m'
 
@@ -99,3 +101,4 @@ with open('sequence.txt', 'r') as f:
     print(f" 0-5:    {CSI}48;5;9m{pos_bar}{RESET}{pos/total*100:.1f}%")
 
     print(f" 0-(-5): {CSI}48;5;122m{neg_bar}{RESET} {neg/total*100:.1f}%")
+
